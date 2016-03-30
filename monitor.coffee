@@ -2,7 +2,7 @@ say = require 'say'
 util = require 'util'
 {ticks} = require 'sedata'
 
-monitor = ()->
+monitor = ->
   ###*
     不知為何,此法若直接定義, 再用
       組合管家.跟蹤行情 = 跟蹤行情
@@ -63,7 +63,7 @@ monitor = ()->
 
           組合管家.應對組合即時行情 組合行情, (指令)->
             # 組合管家不管具體賬戶情況,根據組合行情發出指令,
-            unless 指令? then return this
+            unless 指令? then return null
             for 券商接口 in @各券商接口
               券商接口.賬戶.操作指令 指令, (個性指令)->
                 if 個性指令?
