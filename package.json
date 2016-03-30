@@ -1,0 +1,26 @@
+{
+  "name": "semonitor",
+  "version": "0.1.0",
+  "description": "monitor",
+  "main": "monitor.coffee",
+  "scripts": {
+    "preversion": "coffee -bcmo lib src; git commit -am 'modified and re-build js;'",
+    "postversion": "git push; echo semonitor 已經存庫可以發佈",
+    "prepublish": "cd ..; echo 現在發佈",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emptist/semonitor.git"
+  },
+  "author": "Jigme Ko <jigme1968@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emptist/semonitor/issues"
+  },
+  "homepage": "https://github.com/emptist/semonitor#readme",
+  "devDependencies": {
+    "say": "^0.9.0",
+    "sedata": "*"
+  }
+}
