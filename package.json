@@ -4,6 +4,8 @@
   "description": "monitor",
   "main": "monitor.coffee",
   "scripts": {
+    "prepatch": "git add --all; git commit -am 'modified'",
+    "patch": "npm version patch",
     "postversion": "git push; echo semonitor 已經存庫可以發佈",
     "prepublish": "cd ..; echo 現在發佈",
     "test": "echo \"Error: no test specified\" && exit 1"
