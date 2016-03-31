@@ -7,8 +7,8 @@
     "commit": "npm-run-all patch pub",
     "prepatch": "git add --all; git commit -am 'modified'",
     "patch": "npm version patch",
-    "postversion": "git push; echo semonitor 已經存庫可以發佈",
-    "prepub": "cd ..",
+    "postversion": "git push",
+    "prepub": "echo 已經git push 準備 publish...",
     "pub": "npm publish ../semonitor",
     "prepublish": "echo 現在發佈...",
     "test": "echo \"Error: no test specified\" && exit 1"
