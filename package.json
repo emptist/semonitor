@@ -4,7 +4,7 @@
   "description": "monitor",
   "main": "monitor.coffee",
   "scripts": {
-    "commit":"npm run patch pub",
+    "commit":"npm-run-all patch pub",
     "prepatch": "git add --all; git commit -am 'modified'",
     "patch": "npm version patch",
     "postversion": "git push; echo semonitor 已經存庫可以發佈",
