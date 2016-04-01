@@ -10,10 +10,12 @@ observe = (組合管家,多券商接口, n, db)-> #(codes,db)->
   券商接口啟動登記 = (多券商接口)->
     for 接口 in 多券商接口
       接口.連接成功 (err,data)->
-        if err? then throw(err)
-        util.log('已接通券商..', data)
-        接口.提取資料 '查詢資產,getCapital'
-        組合管家.各券商接口.push 接口
+        if err?
+          return null #throw(err)
+        else
+          util.log('已接通券商..', data)
+          接口.提取資料 '查詢資產,getCapital'
+          組合管家.各券商接口.push 接口
 
   券商接口啟動登記(多券商接口)
 
