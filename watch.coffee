@@ -43,7 +43,7 @@ observe = (組合管家,多券商接口, n, db)-> #(codes,db)->
     for 接口 in 組合管家.各券商接口
       接口.destroy()
     # 亦可在此斷開數據庫連接
-    db.close()
+    db?.close()
 
   timeout = setTimeout 組合管家.結束跟蹤, 開市時間
 
