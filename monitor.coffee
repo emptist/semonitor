@@ -45,7 +45,8 @@ monitor = ->
 
     sss = 組合管家.symbols
     unless sss.length > 1
-      throw 'observer.coffee>> 出錯: 沒有跟蹤代碼組'
+      #throw 'observer.coffee>> 出錯: 沒有跟蹤代碼組' #為何沒法 catch到?
+      組合管家.結束跟蹤()
     else
       symbols = sss.join(',')
       #util.log('observer: ', symbols)
