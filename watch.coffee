@@ -40,8 +40,8 @@ observe = (組合管家,多券商接口, n, db)-> #(codes,db)->
     util.log '收盤了'
     組合管家.clearIntervals()
     clearInterval interval
-    for 券商 in 組合管家.各券商接口
-      券商.destroy()
+    for 接口 in 組合管家.各券商接口
+      接口.destroy()
     # 亦可在此斷開數據庫連接
     db.close()
 
