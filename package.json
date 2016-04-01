@@ -2,7 +2,7 @@
   "name": "semonitor",
   "version": "0.1.9",
   "description": "monitor",
-  "main": "monitor.coffee",
+  "main": "watch.coffee",
   "scripts": {
     "commit": "npm-run-all patch pub",
     "prepatch": "git add --all; git commit -am 'modified'",
