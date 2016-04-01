@@ -6,8 +6,7 @@ monitor = require './monitor.coffee'
   db: 數據庫連接
   可採用多線程寫法,券商接口各自在自己線程中運行
 ###
-observe = (組合管家,單品策略,多券商接口,n, db)-> #(codes,db)->
-
+observe = (組合管家,多券商接口, n, db)-> #(codes,db)->
   券商接口啟動登記 = (多券商接口)->
     for 接口 in 多券商接口
       接口.就緒 (err,data)->
