@@ -38,7 +38,7 @@ monitor = ->
       組合管家.持倉品種(券商接口.賬戶.可售)
 
     sss = 組合管家.symbols
-    unless sss.length > 1
+    unless sss.length > 0
       #throw 'observer.coffee>> 出錯: 沒有跟蹤代碼組' #為何沒法 catch到?
       組合管家.結束跟蹤()
     else
