@@ -71,7 +71,8 @@ monitor = ->
             unless 指令? then return null
             報告 = "#{指令.指令名},#{指令.操作},#{指令.證券代碼},#{指令.比重},#{指令.委託價位}"
             util.log 報告
-            if 指令.操作 is 'buyIt' then say.speak "#{指令.操作},#{指令.證券代碼}"
+            #if 指令.操作 is 'buyIt' then say.speak "#{指令.操作},#{指令.證券代碼}"
+            if 指令.操作 then say.speak "#{指令.操作},#{指令.證券代碼}"
 
             for 券商接口 in 組合管家.各券商接口
               券商接口.賬戶.操作指令 指令, (個性指令)->
