@@ -1,6 +1,6 @@
 say = require 'say'
 util = require 'util'
-monitor = require './monitor.coffee'
+monitor = require './monitor'
 
 ###
   db: 數據庫連接

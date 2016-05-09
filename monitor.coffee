@@ -30,9 +30,13 @@ monitor = ->
       更新券商賬戶數據部分,也可以用單獨循環,設置稍微長一點的間隔,但為求簡便,就一起循環了
     *###
     for 券商接口 in 組合管家.各券商接口
-      券商接口.提取資料 '查詢資產,getCapital'
-      券商接口.提取資料 '查詢持倉,getPosition'
-      #券商接口.提取資料 '查可撤單,getWOrders'
+      try
+        券商接口.提取資料 '查詢資產,getCapital'
+        券商接口.提取資料 '查詢持倉,getPosition'
+        #券商接口.提取資料 '查可撤單,getWOrders'
+      catch error
+        console.error error
+        return
 
       # 僅跟蹤可售,新買入則從自選品種中選擇
       組合管家.持倉品種(券商接口.賬戶.可售)
