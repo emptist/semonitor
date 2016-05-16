@@ -1,6 +1,6 @@
 {
   "name": "semonitor",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "monitor",
   "main": "watch.coffee",
   "scripts": {
